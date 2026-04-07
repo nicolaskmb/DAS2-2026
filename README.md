@@ -28,13 +28,13 @@ https://github.com/vladimirlima
 
 ```text
 docs/
-├── c4/
-│ ├── 01-context.png # Diagrama C4 Nível 1 (Contexto)
-│ ├── 02-container.png # Diagrama C4 Nível 2 (Containers)
-│
 ├── adr/
 │ ├── ADR-001.md # Decisão: Estratégia de ingestão
 │ ├── ADR-002.md # Decisão: Estratégia de armazenamento
+│
+├── c4/
+│ ├── 01-context.png # Diagrama C4 Nível 1 (Contexto)
+│ ├── 02-container.png # Diagrama C4 Nível 2 (Containers)
 │
 README.md
 ```
@@ -42,18 +42,6 @@ README.md
 ---
 
 ## Navegação da Documentação
-
-### Diagramas C4
-
-C4 Nível 1 — Contexto  
-Representa a interação entre o sistema, usuários e sistemas externos.  
-Caminho: docs/c4/01-context.png
-
-C4 Nível 2 — Containers  
-Detalha os componentes internos da solução e suas responsabilidades.  
-Caminho: docs/c4/02-container.png
-
----
 
 ### Architecture Decision Records (ADR)
 
@@ -64,4 +52,16 @@ Caminho: docs/adr/ADR-001.md
 ADR-002 — Estratégia de Armazenamento  
 Define o uso de Azure SQL Database como base estruturada e Blob Storage para dados brutos.  
 Caminho: docs/adr/ADR-002.md
+
+---
+
+### Diagramas C4
+
+C4 Nível 1 — Contexto  
+Representa a interação entre o sistema, usuários e sistemas externos.  
+Caminho: docs/c4/01-context.png
+
+C4 Nível 2 — Containers  
+Detalha os componentes internos da solução e suas responsabilidades.  
+Caminho: docs/c4/02-container.png
 
