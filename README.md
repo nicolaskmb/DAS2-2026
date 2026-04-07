@@ -26,6 +26,7 @@ https://github.com/vladimirlima
 
 ## Estrutura do Repositório
 
+```text
 docs/
 ├── c4/
 │ ├── 01-context.png # Diagrama C4 Nível 1 (Contexto)
@@ -36,7 +37,7 @@ docs/
 │ ├── ADR-002.md # Decisão: Estratégia de armazenamento
 │
 README.md
-
+```
 
 ---
 
