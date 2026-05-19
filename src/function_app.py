@@ -1,6 +1,5 @@
 import logging
 import azure.functions as func
-
 app = func.FunctionApp()
 
 #importar para function principal
