@@ -13,4 +13,4 @@ def extract_titulo_receber(myTimer: func.TimerRequest) -> None:
     sql_user = os.getenv("SQL_USER_SOURCE")
     sql_pass = os.getenv("SQL_PASSWORD_SOURCE")
 
-    logging.info(f'Servidor: {sql_server}, Database: {sql_database}, Usuário: {sql_user}, Senha: {sql_pass}')
+    logging.info(f'Servidor: {sql_server}, \nDatabase: {sql_database}, \nUsuário: {sql_user}, \nSenha: {sql_pass}')
