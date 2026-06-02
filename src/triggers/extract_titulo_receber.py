@@ -1,6 +1,7 @@
 import logging
 import azure.functions as func
 import os
+import pyodbc
 
 bp = func.Blueprint()
 
@@ -27,7 +28,6 @@ def extract_titulo_receber(myTimer: func.TimerRequest) -> None:
         "Connection Timeout=30;"
     )
 
-   
     try:
         # Estabelece a conexão com o banco de dados usando pyodbc
         with pyodbc.connect(conn_str) as conn:

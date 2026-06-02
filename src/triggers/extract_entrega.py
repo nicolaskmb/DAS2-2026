@@ -1,6 +1,8 @@
 import logging
 import os
 import azure.functions as func
+import pyodbc
+
 
 bp = func.Blueprint()
 
@@ -27,7 +29,6 @@ def extract_entrega(myTimer: func.TimerRequest) -> None:
         "Connection Timeout=30;"
     )
 
-   
     try:
         # Estabelece a conexão com o banco de dados usando pyodbc
         with pyodbc.connect(conn_str) as conn:
