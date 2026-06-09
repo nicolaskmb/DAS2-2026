@@ -16,6 +16,7 @@ from triggers.extract_regiao import bp as regiao
 from triggers.extract_representante import bp as representante
 from triggers.extract_titulo_receber import bp as titulo_receber
 from triggers.extract_transportadora import bp as transportadora
+from triggers.extract_pedido_sqlalchemy import bp as pedido_sqlalchemy
 
 #registrar app
 app.register_functions(categoria_produto)
@@ -31,3 +32,4 @@ app.register_functions(regiao)
 app.register_functions(representante)
 app.register_functions(titulo_receber)
 app.register_functions(transportadora)
+app.register_functions(pedido_sqlalchemy)
