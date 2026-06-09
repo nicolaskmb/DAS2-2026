@@ -59,7 +59,7 @@ def extract_pedido(myTimer: func.TimerRequest) -> None:
             tempos.append(tempo)
 
             logging.info(
-                f"pyodbc - Execução {i+1}: {tempo:.6f} segundos & Registros retornados: {len(rows)}"
+                f"pyodbc - Execução {i+1}: {tempo:.6f} segundos"
             )
 
         media = sum(tempos) / len(tempos)

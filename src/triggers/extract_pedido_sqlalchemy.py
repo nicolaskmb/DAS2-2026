@@ -59,7 +59,7 @@ def extract_pedido_sqlalchemy(myTimer: func.TimerRequest) -> None:
             tempos.append(tempo)
 
             logging.info(
-                f"SQLAlchemy - Execução {i+1}: {tempo:.6f} segundos & Registros retornados: {len(rows)}"
+                f"SQLAlchemy - Execução {i+1}: {tempo:.6f} segundos"
             )
 
         media = sum(tempos) / len(tempos)
