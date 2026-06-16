@@ -90,7 +90,7 @@ def extract_fornecedor(myTimer: func.TimerRequest) -> None:
                 )
 
                 insert_sql = f"""
-                    INSERT INTO {nome_completo}
+                    INSERT INTO [dbo].[{tabela}]
                     ({",".join(f'[{c}]' for c in colunas)})
                     VALUES ({placeholders})
                 """
