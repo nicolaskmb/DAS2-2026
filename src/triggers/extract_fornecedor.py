@@ -66,6 +66,21 @@ def extract_fornecedor(myTimer: func.TimerRequest) -> None:
         """)
 
         tabelas = cursor_origem.fetchall()
+        
+        for schema, tabela in tabelas:
+            try:
+                logging.info(f"Limpando tabela [dbo].[{tabela}]")
+
+                cursor_destino.execute(
+                    f"DELETE FROM [dbo].[{tabela}]"
+                )
+
+            except Exception as e:
+                logging.error(
+                    f"Erro ao limpar [dbo].[{tabela}]: {e}"
+                )
+        
+        conn_destino.commit()
 
         for schema, tabela in tabelas:
 
