@@ -37,7 +37,15 @@ docs/
 │
 ├── c4/
 │   ├── 01-context.png      # Diagrama C4 Nível 1 (Contexto)
-│   ├── 02-container.png    # Diagrama C4 Nível 2 (Containers)
+│   └── 02-container.png    # Diagrama C4 Nível 2 (Containers)
+│
+├── imgs/
+│   ├── image1.png          # Média do valor bruto por pedido por mês
+│   ├── image2.png          # Contagem de pedidos por região
+│   └── image3.png          # Contagem de pedidos por cliente
+│
+├── pbix/
+│   └── PowerBI-Dashboards.pbix   # Dashboard desenvolvido no Power BI
 │
 src/
 ├── triggers/               # Azure Functions responsáveis pela extração dos dados
@@ -82,9 +90,46 @@ Detalha os componentes internos da solução e suas responsabilidades.
 
 ---
 
+### Dashboard Power BI
+
+O dashboard desenvolvido utiliza os dados extraídos do ERP e processados pela solução para apresentar indicadores gerenciais de forma visual.
+
+**Arquivo Power BI (.pbix)**  
+`docs/pbix/PowerBI-Dashboards.pbix`
+
+---
+
+## Dashboard Desenvolvido
+
+Como resultado da extração e processamento dos dados do ERP, foi desenvolvido um dashboard no Power BI contendo indicadores para apoio à tomada de decisão.
+
+### Média do valor bruto por pedido por mês
+
+Este gráfico apresenta a evolução da média do valor bruto dos pedidos ao longo dos meses, permitindo identificar tendências de faturamento e sazonalidade.
+
+![Média do valor bruto por pedido por mês](docs/imgs/image1.png)
+
+---
+
+### Contagem de pedidos por região
+
+Este gráfico apresenta a quantidade de pedidos distribuídos por região, permitindo visualizar quais regiões concentram maior volume de vendas.
+
+![Contagem de pedidos por região](docs/imgs/image2.png)
+
+---
+
+### Contagem de pedidos por cliente
+
+Este gráfico apresenta a quantidade de pedidos realizados por cliente, facilitando a identificação dos clientes com maior volume de compras.
+
+![Contagem de pedidos por cliente](docs/imgs/image3.png)
+
+---
+
 ## Implementação
 
-A pasta `src` contém a implementação da solução utilizando **Azure Functions** em Python.
+A pasta `src` contém a implementação da solução utilizando Azure Functions em Python.
 
 Ela é composta por:
 
@@ -93,4 +138,9 @@ Ela é composta por:
 - `host.json`: configuração da aplicação Azure Functions;
 - `requirements.txt`: dependências do projeto.
 
-Além da implementação das Azure Functions, a pasta também contém a Proof of Concept (PoC) utilizada para comparar bibliotecas de acesso ao banco de dados e validar as decisões arquiteturais adotadas pela equipe.
+Além da implementação das Azure Functions, o projeto inclui:
+
+- Proof of Concept (PoC) para comparação entre SQLAlchemy e pyodbc;
+- Dashboard desenvolvido em Power BI utilizando os dados extraídos do ERP;
+- Documentação arquitetural utilizando o modelo C4;
+- Architecture Decision Records (ADRs) que registram as principais decisões tomadas durante o desenvolvimento.
