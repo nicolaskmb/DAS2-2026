@@ -40,12 +40,10 @@ docs/
 │   └── 02-container.png    # Diagrama C4 Nível 2 (Containers)
 │
 ├── imgs/
-│   ├── image1.png          # Média do valor bruto por pedido por mês
-│   ├── image2.png          # Contagem de pedidos por região
-│   └── image3.png          # Contagem de pedidos por cliente
+│   ├── dashboard.png          # Dashboard desenvolvido no Power BI
 │
 ├── pbix/
-│   └── PowerBI-Dashboards.pbix   # Dashboard desenvolvido no Power BI
+│   └── Dashboard.pbix   # Dashboard desenvolvido no Power BI
 │
 src/
 ├── triggers/               # Azure Functions responsáveis pela extração dos dados
@@ -95,7 +93,7 @@ Detalha os componentes internos da solução e suas responsabilidades.
 O dashboard desenvolvido utiliza os dados extraídos do ERP e processados pela solução para apresentar indicadores gerenciais de forma visual.
 
 **Arquivo Power BI (.pbix)**  
-`docs/pbix/PowerBI-Dashboards.pbix`
+`docs/pbix/Dashboard.pbix`
 
 ---
 
@@ -103,27 +101,7 @@ O dashboard desenvolvido utiliza os dados extraídos do ERP e processados pela s
 
 Como resultado da extração e processamento dos dados do ERP, foi desenvolvido um dashboard no Power BI contendo indicadores para apoio à tomada de decisão.
 
-### Média do valor bruto por pedido por mês
-
-Este gráfico apresenta a evolução da média do valor bruto dos pedidos ao longo dos meses, permitindo identificar tendências de faturamento e sazonalidade.
-
-![Média do valor bruto por pedido por mês](docs/imgs/image1.png)
-
----
-
-### Contagem de pedidos por região
-
-Este gráfico apresenta a quantidade de pedidos distribuídos por região, permitindo visualizar quais regiões concentram maior volume de vendas.
-
-![Contagem de pedidos por região](docs/imgs/image2.png)
-
----
-
-### Contagem de pedidos por cliente
-
-Este gráfico apresenta a quantidade de pedidos realizados por cliente, facilitando a identificação dos clientes com maior volume de compras.
-
-![Contagem de pedidos por cliente](docs/imgs/image3.png)
+![Dashboard Interativo](docs/imgs/dashboard.png)
 
 ---
 
